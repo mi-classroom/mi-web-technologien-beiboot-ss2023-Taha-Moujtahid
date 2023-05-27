@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GeoAR.js demo</title>
+
+    <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <meta aframe-injected="" name="theme-color" content="black">
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+</head>
+
+<body style="margin : 0px;">
+<a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false;" embedded>
+    <a-text
+            value="#000000"
+            look-at="[gps-camera]"
+            scale="5700000000 5700000000 5700000000"
+            gps-entity-place="latitude: 21.422510; longitude: 39.826168;"
+    ></a-text>
+
+    <a-text
+            value="#4CC3D9"
+            look-at="[gps-camera]"
+            scale="1000 1000 1000"
+            gps-entity-place="latitude: 50.935173; longitude:  6.953101;"
+    ></a-text>
+
+    <a-text
+        value="#4CC3D9"
+        look-at="[gps-camera]"
+        scale="1000 1000 1000"
+        gps-entity-place="latitude: 50.928683; longitude:  7.021422;"
+    >
+    </a-text>
+
+    <a-camera gps-camera rotation-reader far="57000000"> </a-camera>
+</a-scene>
+
+<input type="text" id="lat" style="z-index: 500; position: fixed"> lat </input>
+<input type="text" id="long" style="z-index: 500; position: fixed "> long </input>
+</body>
+</html>
